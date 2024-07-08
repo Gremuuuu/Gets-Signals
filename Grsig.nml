@@ -1,0 +1,520 @@
+grf {
+    grfid: "GR\03\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 1;
+    min_compatible_version: 0;
+    url: string(STR_GRF_URL);
+
+//Param
+    param {
+        param_hv {
+            type: bool;
+            name: string(STR_HV_NAME);
+            desc: string(STR_HV_DESC);
+            def_value: 0;
+        }
+    }
+    param {
+        param_hv59 {
+            type: bool;
+            name: string(STR_HV59_NAME);
+            desc: string(STR_HV59_DESC);
+            def_value: 0;
+        }
+    }
+    param {
+        param_hv69 {
+            type: bool;
+            name: string(STR_HV69_NAME);
+            desc: string(STR_HV69_DESC);
+            def_value: 1;
+        }
+    }
+    param {
+        param_hvkp {
+            type: bool;
+            name: string(STR_HV_NAME);
+            desc: string(STR_HV_DESC);
+            def_value: 0;
+        }
+    }
+    param {
+        param_hl {
+            type: bool;
+            name: string(STR_HL_NAME);
+            desc: string(STR_HL_DESC);
+            def_value: 1;
+        }
+    }
+    param {
+        param_ks {
+            type: bool;
+            name: string(STR_KS_NAME);
+            desc: string(STR_KS_DESC);
+            def_value: 1;
+        }
+    }
+    param {
+        param_sh {
+            type: bool;
+            name: string(STR_SH_NAME);
+            desc: string(STR_SH_DESC);
+            def_value: 1;
+        }
+    }
+    }
+
+//Templates
+    template template_ks_signals_1x (x,y) {
+        [0, 0, 20, 30, -9, -28] // ne-sw
+        [28, 0, 20, 30, -9, -28] // sw-ne
+        [56, 0, 20, 30, -9, -28] // se-nw
+        [84, 0, 20, 30, -9, -28] // nw-se
+        [112, 0, 20, 30, -9, -28] // e-w
+        [140, 0, 20, 30, -9, -28] // w-e
+        [168, 0, 20, 30, -9, -28] // s-n
+        [196, 0, 20, 30, -9, -28] // n-s
+    }
+    template template_ks_signals_2x (x,y) {
+        [0, 0, 40, 60, -18, -56] // ne-sw
+        [56, 0, 40, 60, -18, -56] // sw-ne
+        [112, 0, 40, 60, -18, -56] // se-nw
+        [168, 0, 40, 60, -18, -56] // nw-se
+        [224, 0, 40, 60, -18, -56] // e-w
+        [280, 0, 40, 60, -18, -56] // w-e
+        [336, 0, 40, 60, -18, -56] // s-n
+        [392, 0, 40, 60, -18, -56] // n-s
+    }
+    template template_ks_signals_4x (x,y) {
+        [0, 0, 80, 120, -36, -112] // ne-sw
+        [112, 0, 80, 120, -36, -112] // sw-ne
+        [224, 0, 80, 120, -36, -112] // se-nw
+        [336, 0, 80, 120, -36, -112] // nw-se
+        [448, 0, 80, 120, -36, -112] // e-w
+        [560, 0, 80, 120, -36, -112] // w-e
+        [672, 0, 80, 120, -36, -112] // s-n
+        [784, 0, 80, 120, -36, -112] // n-s
+    }
+
+//Spriteset KS
+
+    spriteset (spriteset_KS_HP0_EAs,   "gfx\KS/KS_HP0_EAs_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS_HP0_EAs, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_EAs_1x_32bpp.png", "gfx\KS/KS_HP0_EAs_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_EAs, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_EAs_2x_32bpp.png", "gfx\KS/KS_HP0_EAs_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_EAs, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_EAs_4x_32bpp.png", "gfx\KS/KS_HP0_EAs_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_EAs,   "gfx\KS/KS1_EAs_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_EAs, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_EAs_1x_32bpp.png", "gfx\KS/KS1_EAs_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_EAs, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_EAs_2x_32bpp.png", "gfx\KS/KS1_EAs_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_EAs, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_EAs_4x_32bpp.png", "gfx\KS/KS1_EAs_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_EAs,   "gfx\KS/KS2_EAs_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_EAs, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_EAs_1x_32bpp.png", "gfx\KS/KS2_EAs_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_EAs, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_EAs_2x_32bpp.png", "gfx\KS/KS2_EAs_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_EAs, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_EAs_4x_32bpp.png", "gfx\KS/KS2_EAs_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS_HP0_Bk,   "gfx\KS/KS_HP0_Bk_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS_HP0_Bk, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_Bk_1x_32bpp.png", "gfx\KS/KS_HP0_Bk_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_Bk, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_Bk_2x_32bpp.png", "gfx\KS/KS_HP0_Bk_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_Bk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_Bk_4x_32bpp.png", "gfx\KS/KS_HP0_Bk_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_Bk,   "gfx\KS/KS1_Bk_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_Bk, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_Bk_1x_32bpp.png", "gfx\KS/KS1_Bk_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_Bk, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_Bk_2x_32bpp.png", "gfx\KS/KS1_Bk_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_Bk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_Bk_4x_32bpp.png", "gfx\KS/KS1_Bk_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_Bk,   "gfx\KS/KS2_Bk_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_Bk, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_Bk_1x_32bpp.png", "gfx\KS/KS2_Bk_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_Bk, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_Bk_2x_32bpp.png", "gfx\KS/KS2_Bk_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_Bk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_Bk_4x_32bpp.png", "gfx\KS/KS2_Bk_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS_HP0_MaEAs,   "gfx\KS/KS_HP0_MaEAs_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS_HP0_MaEAs, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaEAs_1x_32bpp.png", "gfx\KS/KS_HP0_MaEAs_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_MaEAs, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaEAs_2x_32bpp.png", "gfx\KS/KS_HP0_MaEAs_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_MaEAs, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaEAs_4x_32bpp.png", "gfx\KS/KS_HP0_MaEAs_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_MaEAs,   "gfx\KS/KS1_MaEAs_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_MaEAs, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaEAs_1x_32bpp.png", "gfx\KS/KS1_MaEAs_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_MaEAs, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaEAs_2x_32bpp.png", "gfx\KS/KS1_MaEAs_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_MaEAs, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaEAs_4x_32bpp.png", "gfx\KS/KS1_MaEAs_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_MaEAs,   "gfx\KS/KS2_MaEAs_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_MaEAs, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaEAs_1x_32bpp.png", "gfx\KS/KS2_MaEAs_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_MaEAs, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaEAs_2x_32bpp.png", "gfx\KS/KS2_MaEAs_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_MaEAs, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaEAs_4x_32bpp.png", "gfx\KS/KS2_MaEAs_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS_HP0_MaBk,   "gfx\KS/KS_HP0_MaBk_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS_HP0_MaBk, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaBk_1x_32bpp.png", "gfx\KS/KS_HP0_MaBk_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_MaBk, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaBk_2x_32bpp.png", "gfx\KS/KS_HP0_MaBk_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_MaBk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaBk_4x_32bpp.png", "gfx\KS/KS_HP0_MaBk_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_MaBk,   "gfx\KS/KS1_MaBk_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_MaBk, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaBk_1x_32bpp.png", "gfx\KS/KS1_MaBk_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_MaBk, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaBk_2x_32bpp.png", "gfx\KS/KS1_MaBk_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_MaBk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaBk_4x_32bpp.png", "gfx\KS/KS1_MaBk_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_MaBk,   "gfx\KS/KS2_MaBk_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_MaBk, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaBk_1x_32bpp.png", "gfx\KS/KS2_MaBk_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_MaBk, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaBk_2x_32bpp.png", "gfx\KS/KS2_MaBk_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_MaBk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaBk_4x_32bpp.png", "gfx\KS/KS2_MaBk_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_Vr,   "gfx\KS/KS2_Vr_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_Vr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_Vr_1x_32bpp.png", "gfx\KS/KS2_Vr_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_Vr, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_Vr_2x_32bpp.png", "gfx\KS/KS2_Vr_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_Vr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_Vr_4x_32bpp.png", "gfx\KS/KS2_Vr_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_Vr,   "gfx\KS/KS1_Vr_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_Vr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_Vr_1x_32bpp.png", "gfx\KS/KS1_Vr_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_Vr, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_Vr_2x_32bpp.png", "gfx\KS/KS1_Vr_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_Vr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_Vr_4x_32bpp.png", "gfx\KS/KS1_Vr_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+
+    spriteset (spriteset_KS_HP0_EAs_i,   "gfx\KS/KS_HP0_EAs_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS_HP0_EAs_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_EAs_i_1x_32bpp.png", "gfx\KS/KS_HP0_EAs_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_EAs_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_EAs_i_2x_32bpp.png", "gfx\KS/KS_HP0_EAs_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_EAs_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_EAs_i_4x_32bpp.png", "gfx\KS/KS_HP0_EAs_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_EAs_i,   "gfx\KS/KS1_EAs_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_EAs_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_EAs_i_1x_32bpp.png", "gfx\KS/KS1_EAs_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_EAs_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_EAs_i_2x_32bpp.png", "gfx\KS/KS1_EAs_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_EAs_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_EAs_i_4x_32bpp.png", "gfx\KS/KS1_EAs_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_EAs_i,   "gfx\KS/KS2_EAs_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_EAs_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_EAs_i_1x_32bpp.png", "gfx\KS/KS2_EAs_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_EAs_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_EAs_i_2x_32bpp.png", "gfx\KS/KS2_EAs_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_EAs_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_EAs_i_4x_32bpp.png", "gfx\KS/KS2_EAs_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS_HP0_Bk_i,   "gfx\KS/KS_HP0_Bk_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS_HP0_Bk_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_Bk_i_1x_32bpp.png", "gfx\KS/KS_HP0_Bk_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_Bk_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_Bk_i_2x_32bpp.png", "gfx\KS/KS_HP0_Bk_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_Bk_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_Bk_i_4x_32bpp.png", "gfx\KS/KS_HP0_Bk_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_Bk_i,   "gfx\KS/KS1_Bk_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_Bk_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_Bk_i_1x_32bpp.png", "gfx\KS/KS1_Bk_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_Bk_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_Bk_i_2x_32bpp.png", "gfx\KS/KS1_Bk_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_Bk_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_Bk_i_4x_32bpp.png", "gfx\KS/KS1_Bk_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_Bk_i,   "gfx\KS/KS2_Bk_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_Bk_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_Bk_i_1x_32bpp.png", "gfx\KS/KS2_Bk_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_Bk_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_Bk_i_2x_32bpp.png", "gfx\KS/KS2_Bk_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_Bk_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_Bk_i_4x_32bpp.png", "gfx\KS/KS2_Bk_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS_HP0_MaEAs_i,   "gfx\KS/KS_HP0_MaEAs_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS_HP0_MaEAs_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaEAs_i_1x_32bpp.png", "gfx\KS/KS_HP0_MaEAs_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_MaEAs_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaEAs_i_2x_32bpp.png", "gfx\KS/KS_HP0_MaEAs_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_MaEAs_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaEAs_i_4x_32bpp.png", "gfx\KS/KS_HP0_MaEAs_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_MaEAs_i,   "gfx\KS/KS1_MaEAs_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_MaEAs_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaEAs_i_1x_32bpp.png", "gfx\KS/KS1_MaEAs_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_MaEAs_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaEAs_i_2x_32bpp.png", "gfx\KS/KS1_MaEAs_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_MaEAs_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaEAs_i_4x_32bpp.png", "gfx\KS/KS1_MaEAs_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_MaEAs_i,   "gfx\KS/KS2_MaEAs_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_MaEAs_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaEAs_i_1x_32bpp.png", "gfx\KS/KS2_MaEAs_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_MaEAs_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaEAs_i_2x_32bpp.png", "gfx\KS/KS2_MaEAs_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_MaEAs_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaEAs_i_4x_32bpp.png", "gfx\KS/KS2_MaEAs_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS_HP0_MaBk_i,   "gfx\KS/KS_HP0_MaBk_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS_HP0_MaBk_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaBk_i_1x_32bpp.png", "gfx\KS/KS_HP0_MaBk_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_MaBk_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaBk_i_2x_32bpp.png", "gfx\KS/KS_HP0_MaBk_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS_HP0_MaBk_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_MaBk_i_4x_32bpp.png", "gfx\KS/KS_HP0_MaBk_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_MaBk_i,   "gfx\KS/KS1_MaBk_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_MaBk_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaBk_i_1x_32bpp.png", "gfx\KS/KS1_MaBk_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_MaBk_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaBk_i_2x_32bpp.png", "gfx\KS/KS1_MaBk_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_MaBk_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_MaBk_i_4x_32bpp.png", "gfx\KS/KS1_MaBk_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_MaBk_i,   "gfx\KS/KS2_MaBk_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_MaBk_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaBk_i_1x_32bpp.png", "gfx\KS/KS2_MaBk_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_MaBk_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaBk_i_2x_32bpp.png", "gfx\KS/KS2_MaBk_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_MaBk_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_MaBk_i_4x_32bpp.png", "gfx\KS/KS2_MaBk_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS2_Vr_i,   "gfx\KS/KS2_Vr_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS2_Vr_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS2_Vr_i_1x_32bpp.png", "gfx\KS/KS2_Vr_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS2_Vr_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS2_Vr_i_2x_32bpp.png", "gfx\KS/KS2_Vr_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS2_Vr_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS2_Vr_i_4x_32bpp.png", "gfx\KS/KS2_Vr_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+    spriteset (spriteset_KS1_Vr_i,   "gfx\KS/KS1_Vr_i_1x_8bpp.png") 
+            { template_ks_signals_1x(0,0)}
+        alternative_sprites (spriteset_KS1_Vr_i, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS1_Vr_i_1x_32bpp.png", "gfx\KS/KS1_Vr_i_1x_mask.png")
+            { template_ks_signals_1x(0, 0)}
+        alternative_sprites (spriteset_KS1_Vr_i, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS1_Vr_i_2x_32bpp.png", "gfx\KS/KS1_Vr_i_2x_mask.png")
+            { template_ks_signals_2x(0, 0)}
+        alternative_sprites (spriteset_KS1_Vr_i, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS1_Vr_i_4x_32bpp.png", "gfx\KS/KS1_Vr_i_4x_mask.png")
+            { template_ks_signals_4x(0, 0)}
+
+// Switches Ks signals
+
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_Bk, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS_HP0_Bk;
+        1: spriteset_KS2_Bk;
+        2: spriteset_KS1_Bk;
+    }
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_eas, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS_HP0_EAs;
+        1: spriteset_KS2_EAs;
+        2: spriteset_KS1_EAs;
+        }
+
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_maBk, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS_HP0_MaBk;
+        1: spriteset_KS2_MaBk;
+        2: spriteset_KS1_MaBk;
+    }
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_maeas, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS_HP0_MaEAs;
+        1: spriteset_KS2_MaEAs;
+        2: spriteset_KS1_MaEAs;
+        }
+
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_Vr, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS2_Vr;
+        1: spriteset_KS1_Vr;
+    }
+
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_Bk_i, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS_HP0_Bk_i;
+        1: spriteset_KS2_Bk_i;
+        2: spriteset_KS1_Bk_i;
+    }
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_eas_i, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS_HP0_EAs_i;
+        1: spriteset_KS2_EAs_i;
+        2: spriteset_KS1_EAs_i;
+        }
+
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_maBk_i, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS_HP0_MaBk_i;
+        1: spriteset_KS2_MaBk_i;
+        2: spriteset_KS1_MaBk_i;
+    }
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_maeas_i, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS_HP0_MaEAs_i;
+        1: spriteset_KS2_MaEAs_i;
+        2: spriteset_KS1_MaEAs_i;
+        }
+
+    switch(FEAT_SIGNALS, SELF, signal_switch_ks_Vr_i, getbits(extra_callback_info2, 0, 8)) {
+        0: spriteset_KS2_Vr_i;
+        1: spriteset_KS1_Vr_i;
+    }
+
+// Switches Build
+
+
+    switch(FEAT_SIGNALS, SELF, switch_signals, (extra_callback_info2 & 0x00FFFF00) | signal_style) {
+
+        0x2: signal_switch_ks_Vr;          //light, PBS
+        0x3: signal_switch_ks_Vr_i;          //light, PBS
+        0x4: signal_switch_ks_Bk;          //light, PBS
+        0x40004: signal_switch_ks_eas;          //light, PBS
+        0x50004: signal_switch_ks_eas;          //light, PBS
+        0x5: signal_switch_ks_Bk_i;          //light, PBS
+        0x40005: signal_switch_ks_eas_i;          //light, PBS
+        0x50005: signal_switch_ks_eas_i;          //light, PBS
+        0x40006: signal_switch_ks_maeas;          //light, PBS
+        0x40007: signal_switch_ks_maeas_i;          //light, PBS
+        CB_FAILED;
+    }
+
+item (FEAT_SIGNALS, custom_signals, 0) {
+    property {
+        enable_signal_recolour: 1;
+
+        }
+
+    graphics {
+        switch_signals;
+    }
+}
+
+if (param_hv) {
+    item (FEAT_SIGNALS, custom_signals, 0) {
+        property {
+            define_style: 0;
+            style_name: string(STR_STYLE_HV);
+            style_electric_enabled: 0x90;
+            style_no_aspect_increase: 1;
+            style_lookahead_single_signal_only: 1;
+            
+        }
+    }
+}
+
+if (param_ks) {
+    item (FEAT_SIGNALS, custom_signals, 0) {
+        property {
+            define_style: 2;
+            no_default_style: 1;
+            style_no_aspect_increase: 1;
+            style_name: string(STR_STYLE_KS_VR);
+            style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL);
+            style_always_reserve_through: 1;
+            define_style: 3;
+            no_default_style: 1;
+            style_no_aspect_increase: 1;
+            style_name: string(STR_STYLE_KS_VR_OPP);
+            style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL);
+            style_always_reserve_through: 1;
+            style_opposite_side: 0x1;
+            define_style: 4;
+            no_default_style: 1;
+            style_no_aspect_increase: 1;
+            style_name: string(STR_STYLE_KS);
+            style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+            define_style: 5;
+            no_default_style: 1;
+            style_no_aspect_increase: 1;
+            style_name: string(STR_STYLE_KS);
+            style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+            style_opposite_side: 0x1;
+            define_style: 6;
+            no_default_style: 1;
+            style_no_aspect_increase: 1;
+            style_name: string(STR_STYLE_KS);
+            style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+            define_style: 7;
+            style_name: string(STR_STYLE_KS_MA_OPP);
+            no_default_style: 1;
+            style_no_aspect_increase: 1;
+            style_name: string(STR_STYLE_KS);
+            style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+            style_opposite_side: 0x1;
+
+        }
+    }
+}
+if (param_hl) {
+    item (FEAT_SIGNALS, custom_signals, 0) {
+        property {
+            define_style: 10;
+            style_name: string(STR_STYLE_HL);
+            style_electric_enabled: 0x90;
+            style_no_aspect_increase: 1;
+            style_lookahead_single_signal_only: 1;
+            
+        }
+    }
+}
+
+if (param_sk) {
+    item (FEAT_SIGNALS, custom_signals, 0) {
+        property {
+            define_style: 6;
+            style_name: string(STR_STYLE_SK);
+            style_electric_enabled: 0x90;
+            style_no_aspect_increase: 1;
+            style_lookahead_single_signal_only: 1;
+            
+        }
+    }
+}
+
+if (param_sv) {
+    item (FEAT_SIGNALS, custom_signals, 0) {
+        property {
+            define_style: 8;
+            style_name: string(STR_STYLE_SV);
+            style_electric_enabled: 0x90;
+            style_no_aspect_increase: 1;
+            style_lookahead_single_signal_only: 1;
+            
+        }
+    }
+}
+
+if (param_sh) {
+    item (FEAT_SIGNALS, custom_signals, 0) {
+        property {
+            define_style: 8;
+            style_name: string(STR_STYLE_SH);
+            style_electric_enabled: 0x90;
+            style_no_aspect_increase: 1;
+            style_lookahead_single_signal_only: 1;
+            
+        }
+    }
+}
+

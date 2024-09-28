@@ -1,6 +1,6 @@
 ﻿##grflangid 0x01
-STR_GRF_NAME                                :Testbed Signals
-STR_GRF_DESCRIPTION                         :{}idk {}{}License: GPL v2
+STR_GRF_NAME                                :Gets-style-signals
+STR_GRF_DESCRIPTION                         :{}Please read the description for more information {}{}License: none cus idk how that works gg
 STR_GRF_URL                                 :
 
 
@@ -10,23 +10,20 @@ STR_GRF_URL                                 :
 
 
 
-STR_VR_NAME                  :VR signals
-STR_VR_DESC                  :enables the original Vr signal experience (check readme if you dont know how to use those)
-STR_HVKP_NAME                :HV Kompakt signals
-STR_HVKP_DESC                :enables the "newer" HV signals
-STR_SCHWEB_NAME              :Hanging signals
-STR_SCHWEB_DESC              :enables signals without the "mast"
+STR_HL_NAME                  :HL signals
+STR_HL_DESC                  :enables the HL signals
+
+STR_ADV_NAME                 :advanced signals
+STR_ADV_DESC                 :enables signals in the gegengleis and hanging signals
 
 STR_STYLE_HV                 :HV signals
-STR_STYLE_HVVR               :VR signals
-STR_STYLE_HVKP               :HV Kompakt signals
-STR_STYLE_HVKPVR             :VR Kompakt signals
+STR_STYLE_HV69               :HV69 signals
 STR_STYLE_HL                 :HL signals
-STR_STYLE_HLVR               :VR HL signals
+STR_STYLE_HVKP               :Kompakt signals
+STR_STYLE_HVKP_GG            :Kompakt signals Gegengleis
 STR_STYLE_KS                 :KS signals
-STR_STYLE_KSVR               :VR KS signals
-
+STR_STYLE_KS_GG              :KS signals Gegengleis
 STR_STYLE_SH                 :SH signals (Shunting)
-STR_STYLE_SCHWEB             :Hanging signals
+STR_STYLE_HANG               :Hanging signals
 
 

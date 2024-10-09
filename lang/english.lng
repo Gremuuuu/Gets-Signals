@@ -1,6 +1,6 @@
 ﻿##grflangid 0x01
 STR_GRF_NAME                                :Gets-style-signals
-STR_GRF_DESCRIPTION                         :{}Please read the description for more information {}{}License: none cus idk how that works gg
+STR_GRF_DESCRIPTION                         :{}Please cehck the parameters for a more detailled explaination of each signal type, if you are a rookie with german signalling, leave them as they are. It is highly recommended to not change parameters during a running game. {}{}License: none cus idk how that works gg
 STR_GRF_URL                                 :
 
 
@@ -9,21 +9,28 @@ STR_GRF_URL                                 :
 
 
 
+STR_HV69_NAME                :HV69 signals (DB 1969)
+STR_HV69_DESC                :This parameter enables the HV69 signals, which were introduced by the DB in 1969 to improve the HV59. Hv69 signals were common until the 1990s, but are now being replaced by Ks signals.
+STR_HL_NAME                  :HL signals (DR 1958)
+STR_HL_DESC                  :This parameter enables the HL signals, which were used by the GDR starting from 1958. They combined speed and route information into one signal using red, yellow, green, and white lights. After reunification, they were gradually replaced by the KS signals, though some are still in use today.
+STR_HV_KOMP_NAME             :HV Kompakt signals (DB 1978)
+STR_HV_KOMP_DESC             :This parameter enables the HV Kompakt signals, which were introduced by the DB in 1978. They are a simplified version of the "older" HV signals, combining speed and route information into one signal using red, yellow, and green lights. They are still in use today.
+STR_KS_NAME                  :KS signals (DBAG 1994)
+STR_KS_DESC                  :This parameter enables the KS signals, which were introduced by the DBAG in 1994. They combine speed and stop information into a compact signal using red, yellow, and green lights, with white lights for additional instructions. Ks signals are now standard across most of Germany's rail network.
+STR_ADV_NAME                 :advanced signals (hanging, opposite side)
+STR_ADV_DESC                 :This parameter enables more advanced signal positions, such as hanging signals (you will need the waypoints for the bridge) as well as signals on the opposite side (in german its called Gegengleis).
 
-STR_HL_NAME                  :HL signals
-STR_HL_DESC                  :enables the HL signals
+STR_STYLE_HV                 :HV (DRG 1935)
+STR_STYLE_HV69               :HV69 (DB 1959)
+STR_STYLE_HL                 :HL (DR 1958)
+STR_STYLE_HVKP               :HV Kompakt (DB 1978)
+STR_STYLE_HVKP_GG            :HV Kompakt opposite side (Gegengleis)
+STR_STYLE_KS                 :KS (DBAG 1994)
+STR_STYLE_KS_GG              :KS opposite side (Gegengleis)
+STR_STYLE_SH                 :SH - Shunting
+STR_STYLE_HANG               :Hanging HV signals (require waypoints)
 
-STR_ADV_NAME                 :advanced signals
-STR_ADV_DESC                 :enables signals in the gegengleis and hanging signals
+STR_NAME_STATCLASS           :Bridges
+STR_NAME_STATION             :Stations
 
-STR_STYLE_HV                 :HV signals
-STR_STYLE_HV69               :HV69 signals
-STR_STYLE_HL                 :HL signals
-STR_STYLE_HVKP               :Kompakt signals
-STR_STYLE_HVKP_GG            :Kompakt signals Gegengleis
-STR_STYLE_KS                 :KS signals
-STR_STYLE_KS_GG              :KS signals Gegengleis
-STR_STYLE_SH                 :SH signals (Shunting)
-STR_STYLE_HANG               :Hanging signals
-
-
+STR_UNSUPPORTED_VERSION      :dsadasda

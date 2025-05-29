@@ -94,7 +94,7 @@ grf {
         [784, 0, 80, 120, -48, -100] // n-s
     }
 
-    template template_TUNNEL_signals_1x (x,y) {
+    template template_tunnel_signals_1x (x,y) {
         [0, 0, 20, 30, -15, -22] // ne-sw
         [28, 0, 20, 30, -15, -22] // sw-ne
         [56, 0, 20, 30, -15, -22] // se-nw
@@ -104,7 +104,7 @@ grf {
         [168, 0, 20, 30, -15, -22] // s-n
         [196, 0, 20, 30, -15, -22] // n-s
     }
-    template template_TUNNEL_signals_2x (x,y) {
+    template template_tunnel_signals_2x (x,y) {
         [0, 0, 40, 60, -30, -45] // ne-sw
         [56, 0, 40, 60, -30, -45] // sw-ne
         [112, 0, 40, 60, -30, -45] // se-nw
@@ -114,7 +114,7 @@ grf {
         [336, 0, 40, 60, -30, -45] // s-n
         [392, 0, 40, 60, -30, -45] // n-s
     }
-    template template_TUNNEL_signals_4x (x,y) {
+    template template_tunnel_signals_4x (x,y) {
         [0, 0, 80, 120, -60, -90] // ne-sw
         [112, 0, 80, 120, -60, -90] // sw-ne
         [224, 0, 80, 120, -60, -90] // se-nw
@@ -959,48 +959,48 @@ grf {
                 { template_main_signals_2x(0, 0)}
             alternative_sprites (spriteset_KS_KS2_ALT_Pn2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS2_ALT_Pn2_4x_32bpp.png", "gfx\KS/KS_KS2_ALT_Pn2_4x_mask.png")
                 { template_main_signals_4x(0, 0)}
-    //KS TUNNEL 1
-        spriteset (spriteset_KS_HP0_TUNNEL1, "gfx\KS/KS_HP0_TUNNEL1_1x_8bpp.png")
-                { template_TUNNEL_signals_1x(0,0)}
-            alternative_sprites (spriteset_KS_HP0_TUNNEL1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_TUNNEL1_1x_32bpp.png", "gfx\KS/KS_HP0_TUNNEL1_1x_mask.png")
-                { template_TUNNEL_signals_1x(0, 0)}
-            alternative_sprites (spriteset_KS_HP0_TUNNEL1, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_TUNNEL1_2x_32bpp.png", "gfx\KS/KS_HP0_TUNNEL1_2x_mask.png")
-                { template_TUNNEL_signals_2x(0, 0)}
-            alternative_sprites (spriteset_KS_HP0_TUNNEL1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_TUNNEL1_4x_32bpp.png", "gfx\KS/KS_HP0_TUNNEL1_4x_mask.png")
-                { template_TUNNEL_signals_4x(0, 0)}
-        spriteset (spriteset_KS_KS1_TUNNEL1, "gfx\KS/KS_KS1_TUNNEL1_1x_8bpp.png")
-                { template_TUNNEL_signals_1x(0,0)}
-            alternative_sprites (spriteset_KS_KS1_TUNNEL1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_TUNNEL1_1x_32bpp.png", "gfx\KS/KS_KS1_TUNNEL1_1x_mask.png")
-                { template_TUNNEL_signals_1x(0, 0)}
-            alternative_sprites (spriteset_KS_KS1_TUNNEL1, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_TUNNEL1_2x_32bpp.png", "gfx\KS/KS_KS1_TUNNEL1_2x_mask.png")
-                { template_TUNNEL_signals_2x(0, 0)}
-            alternative_sprites (spriteset_KS_KS1_TUNNEL1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_TUNNEL1_4x_32bpp.png", "gfx\KS/KS_KS1_TUNNEL1_4x_mask.png")
-                { template_TUNNEL_signals_4x(0, 0)}
-    //KS TUNNEL 2
-        spriteset (spriteset_KS_HP0_TUNNEL2, "gfx\KS/KS_HP0_TUNNEL2_1x_8bpp.png")
-                { template_TUNNEL_signals_1x(0,0)}
-            alternative_sprites (spriteset_KS_HP0_TUNNEL2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_TUNNEL2_1x_32bpp.png", "gfx\KS/KS_HP0_TUNNEL2_1x_mask.png")
-                { template_TUNNEL_signals_1x(0, 0)}
-            alternative_sprites (spriteset_KS_HP0_TUNNEL2, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_TUNNEL2_2x_32bpp.png", "gfx\KS/KS_HP0_TUNNEL2_2x_mask.png")
-                { template_TUNNEL_signals_2x(0, 0)}
-            alternative_sprites (spriteset_KS_HP0_TUNNEL2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_TUNNEL2_4x_32bpp.png", "gfx\KS/KS_HP0_TUNNEL2_4x_mask.png")
-                { template_TUNNEL_signals_4x(0, 0)}
-        spriteset (spriteset_KS_KS1_TUNNEL2, "gfx\KS/KS_KS1_TUNNEL2_1x_8bpp.png")
-                { template_TUNNEL_signals_1x(0,0)}
-            alternative_sprites (spriteset_KS_KS1_TUNNEL2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_TUNNEL2_1x_32bpp.png", "gfx\KS/KS_KS1_TUNNEL2_1x_mask.png")
-                { template_TUNNEL_signals_1x(0, 0)}
-            alternative_sprites (spriteset_KS_KS1_TUNNEL2, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_TUNNEL2_2x_32bpp.png", "gfx\KS/KS_KS1_TUNNEL2_2x_mask.png")
-                { template_TUNNEL_signals_2x(0, 0)}
-            alternative_sprites (spriteset_KS_KS1_TUNNEL2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_TUNNEL2_4x_32bpp.png", "gfx\KS/KS_KS1_TUNNEL2_4x_mask.png")
-                { template_TUNNEL_signals_4x(0, 0)}
-        spriteset (spriteset_KS_KS2_TUNNEL2, "gfx\KS/KS_KS2_TUNNEL2_1x_8bpp.png")
-                { template_TUNNEL_signals_1x(0,0)}
-            alternative_sprites (spriteset_KS_KS2_TUNNEL2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_KS2_TUNNEL2_1x_32bpp.png", "gfx\KS/KS_KS2_TUNNEL2_1x_mask.png")
-                { template_TUNNEL_signals_1x(0, 0)}
-            alternative_sprites (spriteset_KS_KS2_TUNNEL2, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS2_TUNNEL2_2x_32bpp.png", "gfx\KS/KS_KS2_TUNNEL2_2x_mask.png")
-                { template_TUNNEL_signals_2x(0, 0)}
-            alternative_sprites (spriteset_KS_KS2_TUNNEL2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS2_TUNNEL2_4x_32bpp.png", "gfx\KS/KS_KS2_TUNNEL2_4x_mask.png")
-                { template_TUNNEL_signals_4x(0, 0)}
+    //KS tunnel 1
+        spriteset (spriteset_KS_HP0_tunnel1, "gfx\KS/KS_HP0_tunnel1_1x_8bpp.png")
+                { template_tunnel_signals_1x(0,0)}
+            alternative_sprites (spriteset_KS_HP0_tunnel1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_tunnel1_1x_32bpp.png", "gfx\KS/KS_HP0_tunnel1_1x_mask.png")
+                { template_tunnel_signals_1x(0, 0)}
+            alternative_sprites (spriteset_KS_HP0_tunnel1, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_tunnel1_2x_32bpp.png", "gfx\KS/KS_HP0_tunnel1_2x_mask.png")
+                { template_tunnel_signals_2x(0, 0)}
+            alternative_sprites (spriteset_KS_HP0_tunnel1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_tunnel1_4x_32bpp.png", "gfx\KS/KS_HP0_tunnel1_4x_mask.png")
+                { template_tunnel_signals_4x(0, 0)}
+        spriteset (spriteset_KS_KS1_tunnel1, "gfx\KS/KS_KS1_tunnel1_1x_8bpp.png")
+                { template_tunnel_signals_1x(0,0)}
+            alternative_sprites (spriteset_KS_KS1_tunnel1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_tunnel1_1x_32bpp.png", "gfx\KS/KS_KS1_tunnel1_1x_mask.png")
+                { template_tunnel_signals_1x(0, 0)}
+            alternative_sprites (spriteset_KS_KS1_tunnel1, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_tunnel1_2x_32bpp.png", "gfx\KS/KS_KS1_tunnel1_2x_mask.png")
+                { template_tunnel_signals_2x(0, 0)}
+            alternative_sprites (spriteset_KS_KS1_tunnel1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_tunnel1_4x_32bpp.png", "gfx\KS/KS_KS1_tunnel1_4x_mask.png")
+                { template_tunnel_signals_4x(0, 0)}
+    //KS tunnel 2
+        spriteset (spriteset_KS_HP0_tunnel2, "gfx\KS/KS_HP0_tunnel2_1x_8bpp.png")
+                { template_tunnel_signals_1x(0,0)}
+            alternative_sprites (spriteset_KS_HP0_tunnel2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_tunnel2_1x_32bpp.png", "gfx\KS/KS_HP0_tunnel2_1x_mask.png")
+                { template_tunnel_signals_1x(0, 0)}
+            alternative_sprites (spriteset_KS_HP0_tunnel2, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_tunnel2_2x_32bpp.png", "gfx\KS/KS_HP0_tunnel2_2x_mask.png")
+                { template_tunnel_signals_2x(0, 0)}
+            alternative_sprites (spriteset_KS_HP0_tunnel2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_HP0_tunnel2_4x_32bpp.png", "gfx\KS/KS_HP0_tunnel2_4x_mask.png")
+                { template_tunnel_signals_4x(0, 0)}
+        spriteset (spriteset_KS_KS1_tunnel2, "gfx\KS/KS_KS1_tunnel2_1x_8bpp.png")
+                { template_tunnel_signals_1x(0,0)}
+            alternative_sprites (spriteset_KS_KS1_tunnel2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_tunnel2_1x_32bpp.png", "gfx\KS/KS_KS1_tunnel2_1x_mask.png")
+                { template_tunnel_signals_1x(0, 0)}
+            alternative_sprites (spriteset_KS_KS1_tunnel2, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_tunnel2_2x_32bpp.png", "gfx\KS/KS_KS1_tunnel2_2x_mask.png")
+                { template_tunnel_signals_2x(0, 0)}
+            alternative_sprites (spriteset_KS_KS1_tunnel2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS1_tunnel2_4x_32bpp.png", "gfx\KS/KS_KS1_tunnel2_4x_mask.png")
+                { template_tunnel_signals_4x(0, 0)}
+        spriteset (spriteset_KS_KS2_tunnel2, "gfx\KS/KS_KS2_tunnel2_1x_8bpp.png")
+                { template_tunnel_signals_1x(0,0)}
+            alternative_sprites (spriteset_KS_KS2_tunnel2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx\KS/KS_KS2_tunnel2_1x_32bpp.png", "gfx\KS/KS_KS2_tunnel2_1x_mask.png")
+                { template_tunnel_signals_1x(0, 0)}
+            alternative_sprites (spriteset_KS_KS2_tunnel2, ZOOM_LEVEL_IN_2X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS2_tunnel2_2x_32bpp.png", "gfx\KS/KS_KS2_tunnel2_2x_mask.png")
+                { template_tunnel_signals_2x(0, 0)}
+            alternative_sprites (spriteset_KS_KS2_tunnel2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx\KS/KS_KS2_tunnel2_4x_32bpp.png", "gfx\KS/KS_KS2_tunnel2_4x_mask.png")
+                { template_tunnel_signals_4x(0, 0)}
 
 //Spriteset SH
     //alt
@@ -1254,18 +1254,18 @@ grf {
             0xFF: spriteset_HVKP_SH1_Pn2;
         }
     
-    //KS TUNNEL1
+    //KS tunnel1
         switch(FEAT_SIGNALS, SELF, signal_switch_ks_tunnel1, getbits(extra_callback_info2, 0, 8)) {
-            0: spriteset_KS_HP0_TUNNEL1;
-            1: spriteset_KS_KS1_TUNNEL1;
-            2: spriteset_KS_KS1_TUNNEL1;
+            0: spriteset_KS_HP0_tunnel1;
+            1: spriteset_KS_KS1_tunnel1;
+            2: spriteset_KS_KS1_tunnel1;
         }
     
-    //KS TUNNEL2
+    //KS tunnel2
         switch(FEAT_SIGNALS, SELF, signal_switch_ks_tunnel2, getbits(extra_callback_info2, 0, 8)) {
-            0: spriteset_KS_HP0_TUNNEL2;
-            1: spriteset_KS_KS1_TUNNEL2;
-            2: spriteset_KS_KS2_TUNNEL2;
+            0: spriteset_KS_HP0_tunnel2;
+            1: spriteset_KS_KS1_tunnel2;
+            2: spriteset_KS_KS2_tunnel2;
         }
 
     //KS Bk
@@ -1294,20 +1294,22 @@ grf {
                 2: spriteset_KS_KS1_ALT_P;
             }
         
-        switch(FEAT_SIGNALS, SELF, signalswap_switch_ks_normal_p, signal_context_is_tunnel) {
-                0: signal_switch_ks_normal_p;
-                1: signal_switch_ks_tunnel1;
-        }
+        //switches KS Path
+            switch(FEAT_SIGNALS, SELF, signalswap_switch_ks_normal_p, signal_context_is_tunnel) {
+                    0: signal_switch_ks_normal_p;
+                    1: signal_switch_ks_tunnel1;
+            }
 
-        switch(FEAT_SIGNALS, SELF, signalswap_switch_ks_alt_p, signal_context_is_tunnel) {
-                0: signal_switch_ks_alt_p;
-                1: signal_switch_ks_tunnel1;
-        }
+            switch(FEAT_SIGNALS, SELF, signalswap_switch_ks_alt_p, signal_context_is_tunnel) {
+                    0: signal_switch_ks_alt_p;
+                    1: signal_switch_ks_tunnel1;
+            }
 
-        switch(FEAT_SIGNALS, SELF, signal_switch_ks_p, signal_restriction_info) {
-            bitmask(SIGNAL_RESTRICTION_INFO_RESTRICTED): return signalswap_switch_ks_alt_p;
-                signalswap_switch_ks_normal_p;
-        }
+            switch(FEAT_SIGNALS, SELF, signal_switch_ks_p, signal_restriction_info) {
+                bitmask(SIGNAL_RESTRICTION_INFO_RESTRICTED): return signalswap_switch_ks_alt_p;
+                    signalswap_switch_ks_normal_p;
+            }
+
     //KS Path no entry
         switch(FEAT_SIGNALS, SELF, signal_switch_ks_pn, getbits(extra_callback_info2, 0, 8)) {
             0: spriteset_KS_HP0_Pn;
@@ -1320,12 +1322,39 @@ grf {
             1: spriteset_KS_KS1_Bk2;
             2: spriteset_KS_KS2_Bk2;
         }
+    
     //KS Path2
-        switch(FEAT_SIGNALS, SELF, signal_switch_ks_p2, getbits(extra_callback_info2, 0, 8)) {
-            0: spriteset_KS_HP0_P2;
-            1: spriteset_KS_KS1_P2;
-            2: spriteset_KS_KS2_P2;
-        }
+        //KS Path2
+            switch(FEAT_SIGNALS, SELF, signal_switch_ks_normal_p2, getbits(extra_callback_info2, 0, 8)) {
+                0: spriteset_KS_HP0_P2;
+                1: spriteset_KS_KS1_P2;
+                2: spriteset_KS_KS2_P2;
+            }
+        
+        //KS Path2 ALT
+            switch(FEAT_SIGNALS, SELF, signal_switch_ks_alt_p2, getbits(extra_callback_info2, 0, 8)) {
+                0: spriteset_KS_HP0_ALT_P2;
+                1: spriteset_KS_KS1_ALT_P2;
+                2: spriteset_KS_KS1_ALT_P2;
+            }
+        
+        //switches KS Path2
+            switch(FEAT_SIGNALS, SELF, signalswap_switch_ks_normal_p2, signal_context_is_tunnel) {
+                    0: signal_switch_ks_p2;
+                    1: signal_switch_ks_tunnel2;
+            }
+
+            switch(FEAT_SIGNALS, SELF, signalswap_switch_ks_alt_p2, signal_context_is_tunnel) {
+                    0: signal_switch_ks_alt_p2;
+                    1: signal_switch_ks_tunnel2;
+            }
+
+            switch(FEAT_SIGNALS, SELF, signal_switch_ks_p2, signal_restriction_info) {
+                bitmask(SIGNAL_RESTRICTION_INFO_RESTRICTED): return signalswap_switch_ks_alt_p2;
+                    signalswap_switch_ks_normal_p2;
+            }
+
+
     //KS Path no entry2
         switch(FEAT_SIGNALS, SELF, signal_switch_ks_pn2, getbits(extra_callback_info2, 0, 8)) {
             0: spriteset_KS_HP0_Pn2;
